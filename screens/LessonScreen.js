@@ -11,6 +11,7 @@ const LessonScreen = ({ route }) => {
     <View>
       <View style={{ padding: 16 }}>
         <Text>{lesson.title}</Text>
+        <Text>{lesson.title}</Text>
       </View>
     </View>
   );

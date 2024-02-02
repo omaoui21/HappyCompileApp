@@ -1,11 +1,11 @@
 // screens/HomeScreen.js
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View,Text, FlatList, StyleSheet } from 'react-native';
 import LessonCard from '../components/LessonCard';
 import lessonsData from '../data/data';
 import Header from '../components/Header';
-import { Button } from 'react-native-paper';
+import {Button } from 'react-native-paper';
 
 const HomeScreen =({ navigation }) => {
   const renderLessonCard = ({ item }) => (
@@ -17,6 +17,8 @@ const HomeScreen =({ navigation }) => {
   };
   const limitedData = lessonsData.slice(0, 4);
 
+
+ 
   return (
     <View style={styles.HomeContainer}>
       <Header navigation={navigation}/>
@@ -24,6 +26,7 @@ const HomeScreen =({ navigation }) => {
       <Text style={styles.text}>Welcome to <Text style={{color:'#FFA447'}}>HappyCompile</Text> App</Text>
       <Text style={{color:'#000',fontWeight:'bold',opacity:0.9}}>Let's diving together</Text>
       </View>
+
     <FlatList
       data={limitedData}
       renderItem={renderLessonCard}
